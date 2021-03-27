@@ -22,8 +22,6 @@
                     "Occupacy": {},
                     }, 
                   }
-
-              },
             "+ClearanceSpace": {
               "allOf": [
                 { "$ref": "#/_AbstractTransportationComplex" },
