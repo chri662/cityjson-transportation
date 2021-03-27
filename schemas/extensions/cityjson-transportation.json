@@ -6,7 +6,7 @@
   "version": "0.1",
   "description": "Extension of transport module. Works with CityJSON 1.0.1",
    "extraAttributes": {
-    "Transportation": {
+    "AbstractTransportationSpace": {
       "+GranularityValue":{"type": { "enum": ["lane"]}       
       "+TrafficDirectionValue":{}
         "_AbstractCityObject": {
@@ -22,7 +22,21 @@
                     "granularity": {  },
                     "trafficDirection":{},
                     "Occupacy": {},
-                    }, }
+                    }, 
+                  }
+
+              },
+            "+ClearanceSpace": {
+              "allOf": [
+                { "$ref": "#/_AbstractTransportationComplex" },
+                {
+                  "properties": {
+                    "classe": {  },
+                    }, 
+                  }
+                  "parent": {
+                    "type": "string",
+                    "description": "the ID of the children TrafficSpace"}
                 ]
               },
           "+AuxiliaryTrafficSpace": {
@@ -34,7 +48,11 @@
                     "function": { },
                     "usage": { },
                     "granularity": {  },     
-                },}
+                },
+              }
+              "parent": {
+                "type": "string",
+                "description": "the ID of the children AbstractTransportationSpace"}
             ]
           },
 
@@ -49,6 +67,21 @@
               }
             ]
           },
+
+          "+Hole": {
+            "allOf": [
+              { "$ref": "#/_AbstractTransportationComplex" },
+              {
+                  "properties": {
+                    "classe": {  },    
+                },
+              }
+              "parent": {
+                "type": "string",
+                "description": "the ID of the children Marking"}
+            ]
+          },
+
       }
      
 
