@@ -7,7 +7,7 @@
   "description": "Extension of transport module. Works with CityJSON 1.0.1",
    "extraAttributes": {
     "Transportation": {
-      "+GranularityValue":{"type": { "enum": ["lane"],["way"]}       
+      "+GranularityValue":{"type": { "enum": ["lane"]}       
       "+TrafficDirectionValue":{ .... }
         "_AbstractCityObject": {
           "additionalProperties":{
