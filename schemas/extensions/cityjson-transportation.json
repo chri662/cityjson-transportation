@@ -7,8 +7,6 @@
   "description": "Extension of transport module. Works with CityJSON 1.0.1",
    "extraAttributes": {
     "AbstractTransportationSpace": {
-      "+GranularityValue":{"type": { "enum": ["lane"]}       
-      "+TrafficDirectionValue":{}
         "_AbstractCityObject": {
           "additionalProperties":{
             "+TrafficSpace": {
@@ -78,6 +76,19 @@
                 "description": "the ID of the children Marking"}
             ]
           },
+          "TrafficArea": {
+            "allOf": [
+              { "$ref": "#/_AbstractTransportationComplex" },
+              {
+                "+HoleSuface":{}
+
+                  }, 
+                }
+            "parent": {
+              "type": "string",
+              "description": "the ID of the children TrafficSpace"}
+            ]
+           },
 
       }
      
