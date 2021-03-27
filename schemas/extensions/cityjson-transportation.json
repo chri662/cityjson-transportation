@@ -1,44 +1,56 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "type": "object",  
-  "$id": "extension",
-  "title": "CityJSON Extension specifications v1.0.0",
-  "type": "object",
+  "$id": "extensiontranspotation.schema.json",
+  "uri": "https://github.com/chri662/cityjson-transportation/edit/main/schemas/extensions/cityjson-transportation.json",
+  "version": "0.1",
+  "description": "Extension of transport module. Works with CityJSON 1.0.1",
+   "extraAttributes": {
+    "Transportation": {
+      "+GranularityValue":{"type": { "enum": ["lane"],["way"]}       
+      "+TrafficDirectionValue":{ .... }
+        "_AbstractCityObject": {
+          "additionalProperties":{
+            "+TrafficSpace": {
+              "allOf": [
+                { "$ref": "#/_AbstractTransportationComplex" },
+                {
+                  "properties": {
+                    "classe": {  },
+                    "function": { },
+                    "usage": { },
+                    "granularity": {  },
+                    "trafficDirection":{},
+                    "Occupacy": {},
+                    }, }
+                ]
+              },
+          "+AuxiliaryTrafficSpace": {
+            "allOf": [
+              { "$ref": "#/_AbstractTransportationComplex" },
+              {
+                  "properties": {
+                    "classe": {  },
+                    "function": { },
+                    "usage": { },
+                    "granularity": {  },     
+                },}
+            ]
+          },
 
-  "definitions": {
-    "Plus": {
-      "patternProperties": {
-        "(\\+)\\w+": {}
-      },
-      "additionalProperties": false
-    }
-  },
-
-  "properties": {
-    "type": { "enum": ["CityJSON_Extension"] },
-    "name": {
-      "type": "string",
-      "pattern": "^\\w[a-zA-Z@#0-9._]*$",
-      "description": "no spaces allowed"
-    },
-    "version": {
-      "type": "string",
-      "pattern": "^(\\d\\.)(\\d+\\.)?(\\*|\\d+)$"
-    },
-    "uri": {
-      "type": "string",
-      "format": "uri-reference",
-      "description": "good to host the extension at a URI so that others can access it"
-    },
-    "description": { "type": "string" },
-    "definitions": {},
-
-    "extraRootProperties": {
-      "patternProperties": {
-        "(\\+)\\w+": {}
-      },
-      "additionalProperties": false
-    },
+          "+Marking": {
+            "allOf": [
+              { "$ref": "#/_AbstractTransportationComplex" },
+              {
+                "properties": {
+                    "type": { "enum": ["Marking"] }       
+                },
+                "required": ["type"]
+              }
+            ]
+          },
+      }
+     
 
     "extraAttributes": {
       "type": "object",
