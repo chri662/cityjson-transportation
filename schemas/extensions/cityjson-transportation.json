@@ -50,90 +50,92 @@
                            }
                         }
                      }
-                  ]
-                  {
-               "parent":{
-                  "type":"string",
-                  "description":"the ID of the children TrafficSpace"
-               }
-            }
-         },
-         "+AuxiliaryTrafficSpace":{
-            "allOf":[
-               {
-                  "$ref":"#/_AbstractTransportationComplex"
-               },
-               {
-                  "properties":{
-                     "classe":{
-                        
-                     },
-                     "function":{
-                        
-                     },
-                     "usage":{
-                        
-                     },
-                     "granularity":{
-                        
+                  ]{
+                     "parent":{
+                        "type":"string",
+                        "description":"the ID of the children TrafficSpace"
                      }
                   }
-               }
-            ]
-         },
-         "+Marking":{
-            "allOf":[
-               {
-                  "$ref":"#/_AbstractTransportationComplex"
                },
-               {
-                  "properties":{
-                     "type":{
-                        "enum":[
-                           "Marking"
+               "+AuxiliaryTrafficSpace":{
+                  "allOf":[
+                     {
+                        "$ref":"#/_AbstractTransportationComplex"
+                     },
+                     {
+                        "properties":{
+                           "classe":{
+                              
+                           },
+                           "function":{
+                              
+                           },
+                           "usage":{
+                              
+                           },
+                           "granularity":{
+                              
+                           }
+                        }
+                     }
+                  ]
+               },
+               "+Marking":{
+                  "allOf":[
+                     {
+                        "$ref":"#/_AbstractTransportationComplex"
+                     },
+                     {
+                        "properties":{
+                           "type":{
+                              "enum":[
+                                 "Marking"
+                              ]
+                           }
+                        },
+                        "required":[
+                           "type"
                         ]
                      }
-                  },
-                  "required":[
-                     "type"
                   ]
-               }
-            ]
-         },
-         "+Hole":{
-            "allOf":[
-               {
-                  "$ref":"#/_AbstractTransportationComplex"
                },
-               {
-                  "properties":{
-                     "classe":{
-                        
+               "+Hole":{
+                  "allOf":[
+                     {
+                        "$ref":"#/_AbstractTransportationComplex"
+                     },
+                     {
+                        "properties":{
+                           "classe":{
+                              
+                           }
+                        }
+                     }
+                  ]{
+                     "parent":{
+                        "type":"string",
+                        "description":"the ID of the children Marking"
                      }
                   }
                }
-            ]
-            {
-         "parent":{
-            "type":"string",
-            "description":"the ID of the children Marking"
-         }
-      }
-   }
-},
-"TrafficArea":{
-   "allOf":[
-      {
-         "$ref":"#/_AbstractTransportationComplex"
-      },
-      {
-         "properties":{
-            "+HoleSuface":{
-            
-         }}}
-      ]
-   {
-   "parent":{
-   "type":"string",
-   "description":"the ID of the children TrafficSpace"
-}}}
+            },
+            "TrafficArea":{
+               "allOf":[
+                  {
+                     "$ref":"#/_AbstractTransportationComplex"
+                  },
+                  {
+                     "properties":{
+                        "+HoleSuface":{
+
+                        }
+                     }
+                  }
+               ],
+               {
+                  "parent":{
+                     "type":"string",
+                     "description":"the ID of the children TrafficSpace"
+                  }
+               }
+            }
