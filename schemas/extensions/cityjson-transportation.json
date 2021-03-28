@@ -126,10 +126,10 @@
       {
          "$ref":"#/_AbstractTransportationComplex"
       },
-         
-         "+HoleSuface":{
+         "properties":{
+            "+HoleSuface":{
             
-         }
+         }}
       ]
 
    "parent":{
