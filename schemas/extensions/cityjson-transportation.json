@@ -131,7 +131,7 @@
                            }
                         }
                      }
-                  ],
+                  ]
                   {
                      "parent":{
                         "type":"string",
