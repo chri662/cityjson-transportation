@@ -51,7 +51,7 @@
                         }
                      }
                   ]
-               },
+                  {,
                "parent":{
                   "type":"string",
                   "description":"the ID of the children TrafficSpace"
