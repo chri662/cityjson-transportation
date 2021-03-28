@@ -117,8 +117,8 @@
                         "description":"the ID of the children Marking"
                      }
                   }
-               }
-            },
+               },
+            
                "TrafficArea":{
                   "allOf":[
                      {
