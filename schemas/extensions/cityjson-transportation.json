@@ -119,23 +119,23 @@
                   }
                }
             },
-            "TrafficArea":{
-               "allOf":[
-                  {
-                     "$ref":"#/_AbstractTransportationComplex"
-                  },
-                  {
-                     "properties":{
-                        "+HoleSuface":{
+               "TrafficArea":{
+                  "allOf":[
+                     {
+                        "$ref":"#/_AbstractTransportationComplex"
+                     },
+                     {
+                        "properties":{
+                           "+HoleSuface":{
 
+                           }
                         }
                      }
-                  }
-               ],
-               {
-                  "parent":{
-                     "type":"string",
-                     "description":"the ID of the children TrafficSpace"
+                  ],
+                  {
+                     "parent":{
+                        "type":"string",
+                        "description":"the ID of the children TrafficSpace"
+                     }
                   }
                }
-            }
