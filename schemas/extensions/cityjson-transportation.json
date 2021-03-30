@@ -135,7 +135,7 @@
                }
             ]
          },
-         "section":{
+         "+section":{
             "allOf":[
                {
                   "$ref":"#/_AbstractTransportationComplex"
@@ -154,7 +154,7 @@
                   "description":"the ID of the children of track"
                }
             },         
-         "intersection":{
+         "+intersection":{
             "allOf":[
                {
                   "$ref":"#/_AbstractTransportationComplex"
