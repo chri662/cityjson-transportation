@@ -116,6 +116,25 @@
                }
             }
          },
+         "+waterwall":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "type":{
+                        "enum":[
+                           "waterwall"
+                        ]
+                     }
+                  },
+                  "required":[
+                     "type"
+                  ]
+               }
+            ]
+         }
 
             "additionalProperties":{
                "TrafficArea":{
