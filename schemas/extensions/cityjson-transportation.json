@@ -135,6 +135,45 @@
                }
             ]
          },
+         "section":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "+HoleSuface":{
+
+                     }
+                  }
+               }
+            ]
+            {
+               "parent":{
+                  "type":"string",
+                  "description":"the ID of the children of track"
+               }
+            },         
+         "intersection":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "+HoleSuface":{
+
+                     }
+                  }
+               }
+            ]
+            {
+               "parent":{
+                  "type":"string",
+                  "description":"the ID of the children of track"
+               }
+            },
+
 
             "additionalProperties":{
                "TrafficArea":{
@@ -156,4 +195,5 @@
                         "description":"the ID of the children TrafficSpace"
                      }
                   }
+
                }}
