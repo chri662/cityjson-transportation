@@ -7,7 +7,7 @@
    "description":"Extension of transport module. Works with CityJSON 1.0.1",
    "extraAttributes":{
       "AbstractTransportationSpace":{
-          "+GranularityValue":{
+         "+GranularityValue":{
             "allOf":[
                {
                   "$ref":"#/_AbstractTransportationComplex"
@@ -16,7 +16,8 @@
                   "properties":{
                      "type":{
                         "enum":[
-                           "lane","way"
+                           "lane",
+                           "way"
                         ]
                      }
                   },
@@ -26,7 +27,7 @@
                }
             ]
          },
-          "+TrafficDirectionValue":{
+         "+TrafficDirectionValue":{
             "allOf":[
                {
                   "$ref":"#/_AbstractTransportationComplex"
@@ -35,7 +36,9 @@
                   "properties":{
                      "type":{
                         "enum":[
-                           "forwards","backwards","both"
+                           "forwards",
+                           "backwards",
+                           "both"
                         ]
                      }
                   },
@@ -53,22 +56,22 @@
                {
                   "properties":{
                      "classe":{
-
+                        
                      },
                      "function":{
-
+                        
                      },
                      "usage":{
-
+                        
                      },
                      "granularity":{
-
+                        
                      },
                      "trafficDirection":{
-
+                        
                      },
                      "Occupacy":{
-
+                        
                      }
                   }
                }
@@ -82,7 +85,7 @@
                {
                   "properties":{
                      "classe":{
-
+                        
                      }
                   }
                }
@@ -101,16 +104,16 @@
                {
                   "properties":{
                      "classe":{
-
+                        
                      },
                      "function":{
-
+                        
                      },
                      "usage":{
-
+                        
                      },
                      "granularity":{
-
+                        
                      }
                   }
                }
@@ -143,7 +146,7 @@
                {
                   "properties":{
                      "classe":{
-
+                        
                      }
                   }
                }
@@ -181,17 +184,17 @@
                {
                   "properties":{
                      "+HoleSuface":{
-
+                        
                      }
                   }
                }
-            ]
-            {
+            ]{
                "parent":{
                   "type":"string",
                   "description":"the ID of the children of track"
                }
-            },         
+            }
+         },
          "+intersection":{
             "allOf":[
                {
@@ -200,39 +203,36 @@
                {
                   "properties":{
                      "+HoleSuface":{
-
+                        
                      }
                   }
                }
-            ]
-            {
+            ]{
                "parent":{
                   "type":"string",
                   "description":"the ID of the children of track"
                }
-            },
-
-
-
-            "additionalProperties":{
-               "TrafficArea":{
-                  "allOf":[
-                     {
-                        "$ref":"#/_AbstractTransportationComplex"
-                     },
-                     {
-                        "properties":{
-                           "+HoleSuface":{
-
-                           }
-                        }
-                     }
-                  ]
-                  {
-                     "parent":{
-                        "type":"string",
-                        "description":"the ID of the children TrafficSpace"
+            }
+         }
+      },
+      "additionalProperties":{
+         "TrafficArea":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "+HoleSuface":{
+                        
                      }
                   }
-
-               }}
+               }
+            ]{
+               "parent":{
+                  "type":"string",
+                  "description":"the ID of the children TrafficSpace"
+               }
+            }
+         }
+      }
