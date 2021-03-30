@@ -7,118 +7,117 @@
    "description":"Extension of transport module. Works with CityJSON 1.0.1",
    "extraAttributes":{
       "AbstractTransportationSpace":{
-         "_AbstractCityObject":{
-            "additionalProperties":{
-               "+TrafficSpace":{
-                  "allOf":[
-                     {
-                        "$ref":"#/_AbstractTransportationComplex"
-                     },
-                     {
-                        "properties":{
-                           "classe":{
-                              
-                           },
-                           "function":{
-                              
-                           },
-                           "usage":{
-                              
-                           },
-                           "granularity":{
-                              
-                           },
-                           "trafficDirection":{
-                              
-                           },
-                           "Occupacy":{
-                              
-                           }
-                        }
-                     }
-                  ]
+         "+TrafficSpace":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
                },
-               "+ClearanceSpace":{
-                  "allOf":[
-                     {
-                        "$ref":"#/_AbstractTransportationComplex"
+               {
+                  "properties":{
+                     "classe":{
+
                      },
-                     {
-                        "properties":{
-                           "classe":{
-                              
-                           }
-                        }
-                     }
-                  ]{
-                     "parent":{
-                        "type":"string",
-                        "description":"the ID of the children TrafficSpace"
+                     "function":{
+
+                     },
+                     "usage":{
+
+                     },
+                     "granularity":{
+
+                     },
+                     "trafficDirection":{
+
+                     },
+                     "Occupacy":{
+
                      }
                   }
+               }
+            ]
+         },
+         "+ClearanceSpace":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
                },
-               "+AuxiliaryTrafficSpace":{
-                  "allOf":[
-                     {
-                        "$ref":"#/_AbstractTransportationComplex"
-                     },
-                     {
-                        "properties":{
-                           "classe":{
-                              
-                           },
-                           "function":{
-                              
-                           },
-                           "usage":{
-                              
-                           },
-                           "granularity":{
-                              
-                           }
-                        }
+               {
+                  "properties":{
+                     "classe":{
+
                      }
-                  ]
+                  }
+               }
+            ]{
+               "parent":{
+                  "type":"string",
+                  "description":"the ID of the children TrafficSpace"
+               }
+            }
+         },
+         "+AuxiliaryTrafficSpace":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
                },
-               "+Marking":{
-                  "allOf":[
-                     {
-                        "$ref":"#/_AbstractTransportationComplex"
+               {
+                  "properties":{
+                     "classe":{
+
                      },
-                     {
-                        "properties":{
-                           "type":{
-                              "enum":[
-                                 "Marking"
-                              ]
-                           }
-                        },
-                        "required":[
-                           "type"
+                     "function":{
+
+                     },
+                     "usage":{
+
+                     },
+                     "granularity":{
+
+                     }
+                  }
+               }
+            ]
+         },
+         "+Marking":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "type":{
+                        "enum":[
+                           "Marking"
                         ]
                      }
+                  },
+                  "required":[
+                     "type"
                   ]
+               }
+            ]
+         },
+         "+Hole":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
                },
-               "+Hole":{
-                  "allOf":[
-                     {
-                        "$ref":"#/_AbstractTransportationComplex"
-                     },
-                     {
-                        "properties":{
-                           "classe":{
-                              
-                           }
-                        }
-                     }
-                  ]{
-                     "parent":{
-                        "type":"string",
-                        "description":"the ID of the children Marking"
+               {
+                  "properties":{
+                     "classe":{
+
                      }
                   }
-               },
-            
+               }
+            ]{
+               "parent":{
+                  "type":"string",
+                  "description":"the ID of the children Marking"
+               }
+            }
+         },
+
+            "additionalProperties":{
                "TrafficArea":{
                   "allOf":[
                      {
