@@ -116,7 +116,7 @@
                }
             }
          },
-         "+waterwall":{
+         "+waterway":{
             "allOf":[
                {
                   "$ref":"#/_AbstractTransportationComplex"
@@ -125,7 +125,7 @@
                   "properties":{
                      "type":{
                         "enum":[
-                           "waterwall"
+                           "waterway"
                         ]
                      }
                   },
