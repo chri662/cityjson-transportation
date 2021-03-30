@@ -7,6 +7,44 @@
    "description":"Extension of transport module. Works with CityJSON 1.0.1",
    "extraAttributes":{
       "AbstractTransportationSpace":{
+          "+GranularityValue":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "type":{
+                        "enum":[
+                           "lane","way"
+                        ]
+                     }
+                  },
+                  "required":[
+                     "type"
+                  ]
+               }
+            ]
+         },
+          "+TrafficDirectionValue":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "type":{
+                        "enum":[
+                           "forwards","backwards","both"
+                        ]
+                     }
+                  },
+                  "required":[
+                     "type"
+                  ]
+               }
+            ]
+         },
          "+TrafficSpace":{
             "allOf":[
                {
@@ -173,6 +211,7 @@
                   "description":"the ID of the children of track"
                }
             },
+
 
 
             "additionalProperties":{
