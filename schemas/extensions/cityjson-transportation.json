@@ -86,16 +86,17 @@
                      "type":{
                         "enum":[
                            "ClearanceSpace"
-                        ]
+                        ],
+                        "parent":{
+                           "type":"string",
+                           "description":"the ID of the children TrafficSpace"
+                        }
                      }
                   },
                   "required":[
                      "type"
                   ],
-                  "parent":{
-                     "type":"string",
-                     "description":"the ID of the children TrafficSpace"
-                  }
+
                }
             ]
          },
