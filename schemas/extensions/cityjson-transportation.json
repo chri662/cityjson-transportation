@@ -55,7 +55,11 @@
                },
                {
                   "properties":{
-
+                     "type":{
+                        "enum":[
+                           "TrafficSpace"
+                        ]
+                     },
                      "granularity":{
                         
                      },
@@ -65,7 +69,10 @@
                      "Occupacy":{
                         
                      }
-                  }
+                  },
+                  "required":[
+                     "type"
+                  ]
                }
             ]
          },
@@ -76,10 +83,15 @@
                },
                {
                   "properties":{
-
-                  }
-               },
-               {
+                     "type":{
+                        "enum":[
+                           "ClearanceSpace"
+                        ]
+                     }
+                  },
+                  "required":[
+                     "type"
+                  ],
                   "parent":{
                      "type":"string",
                      "description":"the ID of the children TrafficSpace"
@@ -94,11 +106,18 @@
                },
                {
                   "properties":{
-
+                     "type":{
+                        "enum":[
+                           "AuxiliaryTrafficSpace"
+                        ]
+                     },
                      "granularity":{
                         
                      }
-                  }
+                  },
+                  "required":[
+                     "type"
+                  ]
                }
             ]
          },
@@ -128,13 +147,18 @@
                },
                {
                   "properties":{
-
-                  }
-               },
-               {
-                  "parent":{
-                     "type":"string",
-                     "description":"the ID of the children Marking"
+                     "type":{
+                        "enum":[
+                           "Hole"
+                        ]
+                     },
+                     "parent":{
+                        "type":"string",
+                        "description":"the ID of the children Marking"
+                     },
+                     "required":[
+                        "type"
+                     ]
                   }
                }
             ]
@@ -165,16 +189,19 @@
                },
                {
                   "properties":{
-                     "+HoleSuface":{
-                        
+                     "type":{
+                        "enum":[
+                           "section"
+                        ],
+                        "parent":{
+                           "type":"string",
+                           "description":"the ID of the children of track"
+                        }
                      }
-                  }
-               },
-               {
-                  "parent":{
-                     "type":"string",
-                     "description":"the ID of the children of track"
-                  }
+                  },
+                  "required":[
+                     "type"
+                  ]
                }
             ]
          },
@@ -185,40 +212,57 @@
                },
                {
                   "properties":{
+                     "type":{
+                        "enum":[
+                           "intersection"
+                        ],
+                        "parent":{
+                           "type":"string",
+                           "description":"the ID of the children of track"
+                        }
+                     }
+                  },
+                  "required":[
+                     "type"
+                  ]
+               }
+            ]
+         },
+         "+HoleSuface":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+                     "type":{
+                        "enum":[
+                           "HoleSuface"
+                        ]
+                     }
+                  },
+                  "required":[
+                     "type"
+                  ]
+               }
+            ]
+         }
+      },
+      "additionalProperties":{
+         "TrafficArea":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
                      "+HoleSuface":{
                         
                      }
                   }
-               },
-               {
-                  "parent":{
-                     "type":"string",
-                     "description":"the ID of the children of track"
-                  }
                }
             ]
-         },
-         "additionalProperties":{
-            "TrafficArea":{
-               "allOf":[
-                  {
-                     "$ref":"#/_AbstractTransportationComplex"
-                  },
-                  {
-                     "properties":{
-                        "+HoleSuface":{
-                           
-                        }
-                     }
-                  },
-                  {
-                     "parent":{
-                        "type":"string",
-                        "description":"the ID of the children TrafficSpace"
-                     }
-                  }
-               ]
-            }
          }
       }
    }
+}
