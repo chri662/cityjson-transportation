@@ -71,7 +71,7 @@
                      }
                   },
                   "required":[
-                     "type"
+                     "type","granularity","trafficDirection","Occupacy"
                   ]
                }
             ]
@@ -94,7 +94,7 @@
                      }
                   },
                   "required":[
-                     "type"
+                     "type","parent"
                   ],
 
                }
@@ -117,7 +117,7 @@
                      }
                   },
                   "required":[
-                     "type"
+                     "type","granularity"
                   ]
                }
             ]
@@ -201,7 +201,7 @@
                      }
                   },
                   "required":[
-                     "type"
+                     "type","parent"
                   ]
                }
             ]
@@ -224,7 +224,7 @@
                      }
                   },
                   "required":[
-                     "type"
+                     "type","parent"
                   ]
                }
             ]
