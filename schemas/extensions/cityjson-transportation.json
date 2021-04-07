@@ -9,7 +9,7 @@
          "+GranularityValue":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractTransportationSpace"
                },
                {
                   "properties":{
@@ -29,7 +29,7 @@
          "+TrafficDirectionValue":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractTransportationSpace"
                },
                {
                   "properties":{
@@ -50,7 +50,7 @@
          "+TrafficSpace":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractUnoccupiedSpace"
                },
                {
                   "properties":{
@@ -67,10 +67,17 @@
                      },
                      "Occupacy":{
                         
+                     },
+                     "predecessor":{
+
+                     }
+                     
+                    "successor":{
+
                      }
                   },
                   "required":[
-                     "type","granularity","trafficDirection","Occupacy"
+                     "type","granularity","trafficDirection","Occupacy","predecessor","successor"
                   ]
                }
             ]
@@ -78,7 +85,7 @@
          "+ClearanceSpace":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractUnoccupiedSpace"
                },
                {
                   "properties":{
@@ -102,7 +109,7 @@
          "+AuxiliaryTrafficSpace":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractUnoccupiedSpace"
                },
                {
                   "properties":{
@@ -124,7 +131,7 @@
          "+Marking":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractThematicSurface"
                },
                {
                   "properties":{
@@ -143,7 +150,7 @@
          "+Hole":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractThematicSurface"
                },
                {
                   "properties":{
@@ -166,7 +173,7 @@
          "+waterway":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractTransportationSpace"
                },
                {
                   "properties":{
@@ -231,7 +238,7 @@
          "+HoleSuface":{
             "allOf":[
                {
-                  "$ref":"#/_AbstractTransportationComplex"
+                  "$ref":"#/_AbstractThematicSurface"
                },
                {
                   "properties":{
@@ -257,6 +264,22 @@
                {
                   "properties":{
                      "+HoleSuface":{
+                        
+                     }
+                     "+boundary":{
+                        
+                     }
+                  }
+               }
+         "AuxiliaryTrafficArea":{
+            "allOf":[
+               {
+                  "$ref":"#/_AbstractTransportationComplex"
+               },
+               {
+                  "properties":{
+
+                     "+boundary":{
                         
                      }
                   }
