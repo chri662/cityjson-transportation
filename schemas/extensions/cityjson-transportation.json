@@ -5,7 +5,7 @@
    "uri":"https://github.com/chri662/cityjson-transportation/edit/main/schemas/extensions/cityjson-transportation.json",
    "version":"0.1",
    "description":"Extension of transport module. Works with CityJSON 1.0.1",
-   "extraCityObjects"::{
+   "extraCityObjects":{
          "+GranularityValue":{
             "allOf":[
                {
